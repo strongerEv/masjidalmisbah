@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-lora), ui-serif, Georgia, serif;
+
+  --color-canvas: #fafaf8;
+  --color-surface: #ffffff;
+  --color-ink: #1b1f1d;
+  --color-ink-2: #3f4542;
+  --color-muted: #6e7571;
+  --color-line: #ebecea;
+  --color-line-2: #dfe1de;
+
+  /* Hijau logo dipakai seperlunya sebagai aksen, bukan latar. */
+  --color-brand: #0f5c46;
+  --color-brand-600: #137257;
+  --color-brand-soft: #eff6f2;
+  --color-gold: #b8892f;
+  --color-gold-soft: #fbf6ea;
+
+  --color-masuk: #137257;
+  --color-keluar: #b4472e;
+  --color-keluar-soft: #fbf0ec;
+  --color-warn: #a86a09;
+  --color-warn-soft: #fdf5e4;
+  --color-info: #2e5aa8;
+  --color-info-soft: #eef3fb;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  font-size: 17px; /* huruf lebih besar: banyak pengurus berusia di atas 50 tahun */
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  .print-full {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+}
